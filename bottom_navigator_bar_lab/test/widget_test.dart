@@ -21,11 +21,14 @@ void main() {
 
     await tester.tap(find.text('Alarm').last);
     await tester.pumpAndSettle();
+    expect(find.text('Alarm'), findsWidgets);
 
     await tester.tap(find.text('Business').last);
     await tester.pumpAndSettle();
+    expect(find.text('Business'), findsWidgets);
 
     await tester.tap(find.text('School').last);
     await tester.pumpAndSettle();
+    expect(find.text('School'), findsWidgets);
   });
 }
